@@ -3,8 +3,9 @@
 Kalkulerer lån basert på nominell rente, lånestørrelse, gebyr og start- og sluttdato. 
 ## Køring av prosjekt
 
-1. Åpne prosjektet some et Maven-prosjekt. Køyr oppgave/src/main/java/com/OppgaveApplication.java.
-2. Send ein GET-request til localhost:8080/nedbetalingsplan med JSON(application/json) request i formatet
+1. Klon ned prosjektet. 
+2. Åpne prosjektet some et Maven-prosjekt. Køyr oppgave/src/main/java/com/OppgaveApplication.java.
+3. Send ein GET-request til localhost:8080/nedbetalingsplan med JSON(application/json) request i formatet
 ```json
 { 
       "laanebelop": 2000000, 
@@ -16,10 +17,11 @@ Kalkulerer lån basert på nominell rente, lånestørrelse, gebyr og start- og s
       "ukjentVerdi":"TERMINBELOP",
  }
 ```
-
+(Eg har brukt Postman.)
 I respons vil ein få eit array med json-objekter av dette formatet: 
 
 ```json
+[
     {
         "restgjeld": 7752191.575561703,
         "dato": "2020-03-01",
@@ -27,7 +29,9 @@ I respons vil ein få eit array med json-objekter av dette formatet:
         "gebyr": 30.0,
         "rente": 19690.62618671873,
         "total": 143779.52531250787
-    }
+    },
+    ...,
+]
 ```
 
 ### Prerequisites
