@@ -17,7 +17,6 @@ Kalkulerer lån basert på nominell rente, lånestørrelse, gebyr og start- og s
       "ukjentVerdi":"TERMINBELOP",
  }
 ```
-(Eg har brukt Postman.)
 I respons vil ein få eit array med json-objekter av dette formatet: 
 
 ```json
@@ -33,6 +32,8 @@ I respons vil ein få eit array med json-objekter av dette formatet:
     ...,
 ]
 ```
+### Test
+For augeblikket ikkje implementert.
 
 ### Prerequisites
 
